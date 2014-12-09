@@ -16,7 +16,7 @@ public class QuictSort implements Sort {
 		int middleNumber = array[(startIndex + endIndex) / 2];
 
 		while (s < e) {
-			while (array[s] <= middleNumber) {
+			while (array[s] < middleNumber) {
 				s++;
 			}
 			while (array[e] > middleNumber) {
@@ -26,12 +26,10 @@ public class QuictSort implements Sort {
 				array[s] = array[s] + array[e];
 				array[e] = array[s] - array[e];
 				array[s] = array[s] - array[e];
-
 			}
-
 		}
-		quickSort(array, startIndex, s);
-		quickSort(array, s + 1, endIndex);
+		quickSort(array, startIndex, s-1);
+		quickSort(array, s, endIndex);
 	}
 
 	@Override
