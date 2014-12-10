@@ -9,10 +9,11 @@ public class CommonFunctionality {
 	
 	public static void printArray(int[] array)
 	{
-		printPartArray(array, 0 , array.length);
+		printPartArray(array, 0 , array.length-1);
 	}
 	
 	public static void printPartArray(int[] array, int startIndex, int endIndex){
+	
 		for(int i = startIndex ; i <= endIndex; i++){
 			System.out.print(array[i] + ",");
 		}
