@@ -56,9 +56,7 @@ public class QuickSort implements Sort {
 
 		int middleNumber = array[(startIndex + endIndex) / 2];
 
-		
-		
-		
+			
 		array[(startIndex + endIndex) / 2] = array[startIndex];
 		while (i < j) {
 
